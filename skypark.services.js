@@ -71,15 +71,6 @@ angular.module('skyPark')
             return deferred.promise;
         };
 
-        var destroy = function (board_id) {
-            var deferred = $q.defer();
-            var url = baseUrl + 'users/' + userId + '/boards/' + board_id + '.json';
-
-            $http.delete(url).success(deferred.resolve).error(deferred.reject);
-
-            return deferred.promise;
-        };
-
         return {
             find: find,
             search: search,
